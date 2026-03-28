@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "nombre": "Gorro azul",
+    "precio": 15,
+    "categoria": "gorros",
+    "imagen": "Imagenes/Gorro 1.jpg",
+    "link": "paginas/producto-gorro-azul.html"
+  },
+
+  {
+    "id": 2,
+    "nombre": "Gorro verde",
+    "precio": 15,
+    "categoria": "gorros",
+    "imagen": "Imagenes/Gorro 2.jpg",
+    "link": "paginas/producto-gorro-verde.html"
+  },
+
+  {
+    "id": 3,
+    "nombre": "Gorro negro",
+    "precio": 20,
+    "categoria": "gorros",
+    "imagen": "Imagenes/Gorro 3.jpg",
+    "link": "paginas/producto-gorro-negro.html"
+  },
+
+  {
+    "id": 4,
+    "nombre": "Gorro con diseño",
+    "precio": 23,
+    "categoria": "gorros",
+    "imagen": "Imagenes/Gorro 4.jpg",
+    "link": "paginas/producto-gorro-diseño.html"
+  },
+
+  {
+    "id": 5,
+    "nombre": "Chaqueta blanca",
+    "precio": 65,
+    "categoria": "chaquetas",
+    "imagen": "Imagenes/Chaqueta 1.jpg",
+    "link": "paginas/chaqueta-blanca.html"
+  },
+
+  {
+    "id": 6,
+    "nombre": "Chaqueta celeste",
+    "precio": 70,
+    "categoria": "chaquetas",
+    "imagen": "Imagenes/Chaqueta 2.jpg",
+    "link": "paginas/chaqueta-celeste.html"
+  },
+
+  {
+    "id": 7,
+    "nombre": "Chaqueta azul",
+    "precio": 75,
+    "categoria": "chaquetas",
+    "imagen": "Imagenes/Chaqueta 3.jpg",
+    "link": "paginas/chaqueta-azul.html"
+  },
+
+  {
+    "id": 8,
+    "nombre": "Chaqueta negra",
+    "precio": 75,
+    "categoria": "chaquetas",
+    "imagen": "Imagenes/Chaqueta 4.jpg",
+    "link": "paginas/chaqueta-negra.html"
+  },
+
+  {
+    "id": 9,
+    "nombre": "Uniforme varon verde",
+    "precio": 150,
+    "categoria": "Uniformes",
+    "imagen": "Imagenes/Uniforme V 1.jpg",
+    "link": "paginas/uniformev-verde.html"
+  },
+
+  {
+    "id": 10,
+    "nombre": "Uniforme varon azul",
+    "precio": 155,
+    "categoria": "Uniformes",
+    "imagen": "Imagenes/Uniforme V 2.jpg",
+    "link": "paginas/uniformev-azul.html"
+  },
+
+  {
+    "id": 11,
+    "nombre": "Uniforme varon negro",
+    "precio": 160,
+    "categoria": "Uniformes",
+    "imagen": "Imagenes/Uniforme V 3.jpg",
+    "link": "paginas/uniformev-negro.html"
+  },
+
+  {
+    "id": 12,
+    "nombre": "Uniforme varon rojo",
+    "precio": 160,
+    "categoria": "Uniformes",
+    "imagen": "Imagenes/Uniforme V 4.jpg",
+    "link": "paginas/uniformev-rojo.html"
+  },
+
+  {
+    "id": 13,
+    "nombre": "Uniforme mujer azul",
+    "precio": 160,
+    "categoria": "Uniformes",
+    "imagen": "Imagenes/Uniforme M 1.jpg",
+    "link": "paginas/uniformem-azul.html"
+  },
+
+  {
+    "id": 14,
+    "nombre": "Uniforme mujer celeste",
+    "precio": 165,
+    "categoria": "Uniformes",
+    "imagen": "Imagenes/Uniforme M 2.jpg",
+    "link": "paginas/uniformem-celeste.html"
+  },
+
+  {
+    "id": 15,
+    "nombre": "Uniforme mujer negro",
+    "precio": 170,
+    "categoria": "Uniformes",
+    "imagen": "Imagenes/Uniforme M 3.jpg",
+    "link": "paginas/uniformem-negro.html"
+  },
+
+  {
+    "id": 16,
+    "nombre": "Uniforme mujer variado",
+    "precio": 175,
+    "categoria": "Uniformes",
+    "imagen": "Imagenes/Uniforme M 4.jpg",
+    "link": "paginas/uniformem-variado.html"
+  },
+
+  {
+    "id": 17,
+    "nombre": "Bata medica para varon",
+    "precio": 100,
+    "categoria": "Batas",
+    "imagen": "Imagenes/Bata Med 1.jpg",
+    "link": "paginas/bata-1.html"
+  },
+
+  {
+    "id": 18,
+    "nombre": "Bata medica para mujer",
+    "precio": 105,
+    "categoria": "Batas",
+    "imagen": "Imagenes/Bata Med 2.jpg",
+    "link": "paginas/bata-2.html"
+  },
+
+  {
+    "id": 17,
+    "nombre": "Bata blanca resistente",
+    "precio": 90,
+    "categoria": "Batas",
+    "imagen": "Imagenes/Bata Med 3.jpg",
+    "link": "paginas/bata-3.html"
+  },
+
+  {
+    "id": 18,
+    "nombre": "Bata mujer estilizada",
+    "precio": 90,
+    "categoria": "Batas",
+    "imagen": "Imagenes/Bata Med 4.jpg",
+    "link": "paginas/bata-4.html"
+  }
+
+
+]

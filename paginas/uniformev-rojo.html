@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BioMed Clothes</title>
+
+<link rel="stylesheet" href="../index.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="top-banner">
+<img src="../Imagenes/Encabezado.jpg" alt="Encabezado">
+</div>
+
+<div class="navbar">
+
+    <h1 class="brand">BioMed Clothes</h1>
+
+        <nav class="menu">
+
+            <a href="../index.html">Inicio</a>
+            <a href="#">Quienes somos</a>
+            <a href="#">Hombre</a>
+            <a href="#">Mujer</a>
+            <a href="#">Gorros</a>
+
+        </nav>
+
+    <div class="search">
+
+        <input type="text" placeholder="Buscar productos...">
+
+        <span class="search-icon">🔍</span>
+
+    </div>
+
+    <div class="cart" onclick="toggleCart()">
+        🛒 <span id="cart-count"></span>
+        <div id="cart-dropdown" class="cart-dropdown">
+            <h3>Carrito</h3>
+            <div id="cart-items"></div>
+            <p class="cart-total">Total: S/<span id="cart-total">0</span></p>
+            
+            <div class="cart-buttons">
+
+                <button id="clear-cart" onclick="clearCart()">Vaciar Carrito</button>
+                <button id="buy-cart" onclick="goToCheckout()">Comprar</button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</header>
+
+<main class="product-page">
+
+<div class="product-container">
+
+    <img src="../Imagenes/Uniforme V 4.jpg" class="product-image">
+
+    <div class="product-info">
+
+        <h2>Uniforme varon color rojo</h2>
+
+        <p>Uniforme para varon de estilo juvenil.</p>
+
+        <h3>S/25</h3>
+
+        <p>Tallas disponibles:</p>
+
+        <div class="sizes">
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+        </div>
+
+        <button class="add-cart-btn" 
+            onclick="addToCart(160, 'Uniforme varon rojo', '../Imagenes/Uniforme V 4.jpg')">
+            Agregar al carrito
+        </button>
+
+</div>
+
+</div>
+
+</main>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+    <div class="footer-brand">
+        <h2>BioMed Clothes</h2>
+        <p>Uniformes médicos de calidad.</p>
+
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+
+    </div>
+
+    <div class="footer-column">
+        <h3>Nosotros</h3>
+        <a href="#">Nosotros</a>
+        <a href="#">Nuestras tiendas</a>
+        <a href="#">Blog</a>
+    </div>
+
+    <div class="footer-column">
+        <h3>Ayuda</h3>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Contáctanos</a>
+    </div>
+
+    <div class="footer-column">
+        <h3>Legal</h3>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Envíos y entregas</a>
+        <a href="#">Políticas de privacidad</a>
+    </div>
+
+</div>
+
+</footer>
+
+    <script src="../index.js"></script>
+
+</body>
+</html>
