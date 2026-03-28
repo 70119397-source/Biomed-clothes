@@ -15,9 +15,7 @@ function toggleCart() {
 }
 
 function addToCart(price, name, image) {
-
     const cleanImage = image.replace("../", "");
-    
     let existingProduct = cart.find(item => item.name === name);
 
     if (existingProduct) {
@@ -52,7 +50,7 @@ function clearCart() {
 function updateCart() {
     let totalMoney = 0;
     let totalProducts = 0;
-    cartItems.innerHTML = "";
+    if (cartItems) cartItems.innerHTML = "";
 
     const isInSubfolder = window.location.pathname.includes("/paginas/");
     const routePrefix = isInSubfolder ? "../" : "";
@@ -61,16 +59,18 @@ function updateCart() {
         totalMoney += (item.price * item.quantity);
         totalProducts += item.quantity;
         
-        cartItems.innerHTML += `
-            <div class="cart-item">
-                <img src="${routePrefix}${item.image}" class="cart-img">
-                <div>
-                    <p><strong>${item.name}</strong></p>
-                    <p>S/${item.price} x ${item.quantity}</p> 
+        if (cartItems) {
+            cartItems.innerHTML += `
+                <div class="cart-item">
+                    <img src="${routePrefix}${item.image}" class="cart-img">
+                    <div>
+                        <p><strong>${item.name}</strong></p>
+                        <p>S/${item.price} x ${item.quantity}</p> 
+                    </div>
+                    <button class="remove-btn" onclick="event.stopPropagation(); removeItem(${index})">x</button>
                 </div>
-                <button class="remove-btn" onclick="event.stopPropagation(); removeItem(${index})">x</button>
-            </div>
-        `;
+            `;
+        }
     });
 
     if(cartCount) cartCount.innerText = totalProducts; 
@@ -88,19 +88,37 @@ function goToCheckout() {
     window.location.href = isInSubfolder ? "checkout.html" : "paginas/checkout.html";
 }
 
+
 async function cargarProductos() {
     try {
         const respuesta = await fetch('productos.json');
         const productos = await respuesta.json();
-        const contenedor = document.getElementById('contenedor-productos');
+        const contenedorPrincipal = document.getElementById('contenedor-productos');
         
-        if(!contenedor) return; 
+        if(!contenedorPrincipal) return; 
         
-        contenedor.innerHTML = "";
+        contenedorPrincipal.innerHTML = ""; 
 
-        productos.forEach(p => {
-            contenedor.innerHTML += `
-                <div class="card">
+        const categorias = [...new Set(productos.map(p => p.categoria))];
+
+    
+        categorias.forEach(cat => {
+      
+            const titulo = document.createElement("h2");
+            titulo.className = "titulo-categoria";
+            titulo.innerText = cat.charAt(0).toUpperCase() + cat.slice(1);
+            contenedorPrincipal.appendChild(titulo);
+
+   
+            const grid = document.createElement("div");
+            grid.className = "productos-grid"; 
+
+            const productosFiltrados = productos.filter(p => p.categoria === cat);
+
+            productosFiltrados.forEach(p => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
                     <a href="${p.link}">
                         <img src="${p.imagen}" alt="${p.nombre}">
                     </a>
@@ -109,35 +127,26 @@ async function cargarProductos() {
                     <button onclick="addToCart(${p.precio}, '${p.nombre}', '${p.imagen}')">
                         Agregar al carrito
                     </button>
-                </div>
-            `;
+                `;
+                grid.appendChild(card);
+            });
+
+            contenedorPrincipal.appendChild(grid);
         });
+
     } catch (error) {
         console.error("Error cargando los productos:", error);
     }
 }
 
-function removeItemCheckout(index) {
-    cart.splice(index, 1);
-    
-    localStorage.setItem("cart", JSON.stringify(cart));
-    renderCheckout(); 
-
-    if (cart.length === 0) {
-        alert("Tu carrito está vacío, volviendo a la tienda.");
-        window.location.href = "../index.html";
-    }
-}
-
 function confirmPurchase() {
-
     const modal = document.getElementById("payment-modal");
-    modal.style.display = "flex";
+    if(modal) modal.style.display = "flex";
 }
 
 function closePaymentModal() {
     const modal = document.getElementById("payment-modal");
-    modal.style.display = "none";
+    if(modal) modal.style.display = "none";
 }
 
 window.onclick = function(event) {
@@ -147,5 +156,6 @@ window.onclick = function(event) {
     }
 }
 
+// Inicialización
 updateCart();
 cargarProductos();
